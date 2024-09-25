@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Magnetik.variable} ${overpassVariable.variable} antialiased`}
+        className={`${Magnetik.variable} ${overpassVariable.variable} antialiased bg-app-black`}
       >
         {children}
       </body>

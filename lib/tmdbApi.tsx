@@ -19,3 +19,43 @@ export const getPopularMovies = async (page: number = 1) => {
     throw error;
   }
 };
+
+export const getPopularSeries = async (page: number = 1) => {
+  try {
+    const response = await api.get(`/tv/popular?language=en-US&page=${page}`);
+    return response.data.results;
+  } catch (error) {
+    console.error("Error fetching popular series:", error);
+    throw error;
+  }
+}
+
+export const getTopRatedSeries = async (page: number = 1) => {
+  try {
+    const response = await api.get(`/tv/top_rated?language=en-US&page=${page}`);
+    return response.data.results;
+  } catch (error) {
+    console.error("Error fetching top rated series:", error);
+    throw error;
+  }
+}
+
+export const allTrending = async () => {
+  try {
+    const response = await api.get(`/trending/all/week?language=en-US`);
+    return response.data.results;
+  } catch (error) {
+    console.error("Error fetching All trending:", error);
+    throw error;
+  }
+}
+
+export const getDetailMovies = async (movie_id: number = 365177) => {
+  try {
+    const response = await api.get(`/movie/${movie_id}?language=en-US`);
+    return response.data.results;
+  } catch (error) {
+    console.error("Error fetching detail movies:", error);
+    throw error;
+  }
+}

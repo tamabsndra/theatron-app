@@ -10,13 +10,15 @@ const config: Config = {
   theme: {
   	extend: {
 		aspectRatio: {
+        '3/2': '3 / 2',
         '3/4': '3 / 4',
         '4/6': '4 / 6',
+        '21/9': '21 / 9',
       	},
   		colors: {
 			app: {
 				red: '#FC3639',
-				black: '#2B2D42',
+				black: '#1a1a1a',
 				white: '#EDF2F4',
 				grey: '#8D99AE',
 				blue: '#5F9BFF',
